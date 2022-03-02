@@ -1,11 +1,12 @@
 class Trabajador:
+    
     def __init__(self, nombre, categoria, horas_ex, tardanza):
         self.nombre = nombre
         self.categoria = categoria
         self.horas = horas_ex
         self.tardanza = tardanza
 
-    def __str__(self):
+    def datos(self):
         return "================DATOS DE ENTRADA==================\n"\
                f"TRABAJADOR:\t\t {self.nombre}\n"\
                f"CATEGORIA:\t\t {self.categoria}\n"\
@@ -43,7 +44,12 @@ class Boleta(Trabajador):
             return round(self.sueldo_net,2)
 
     def __str__(self):
-        return "================ BOLETA DE PAGO ==================\n"\
+        return"================DATOS DE ENTRADA==================\n"\
+               f"TRABAJADOR:\t\t {self.nombre}\n"\
+               f"CATEGORIA:\t\t {self.categoria}\n"\
+               f"HORAS EXTRAS:\t\t {self.horas}\n"\
+               f"TARDANZA: (minutos)\t {self.tardanza}\n\n" \
+               "================ BOLETA DE PAGO ==================\n"\
                f"TRABAJADOR:\t\t {self.nombre}\n"\
                f"CATEGORIA:\t\t {self.categoria}\n"\
                f"SUELDO BASICO\t\t {self.sueldo()}\n"\
@@ -58,4 +64,5 @@ horas = int(input("Ingrese el número horas extras: "))
 tardanza = int(input("Ingrese la cantidad de minutos de tardanza acumulada: "))
         
 t1 = Boleta(nombre, categoria, horas, tardanza)
+t1.datos()
 print(t1)
