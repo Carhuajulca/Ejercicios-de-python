@@ -5,14 +5,6 @@ class Trabajador:
         self.categoria = categoria
         self.horas = horas_ex
         self.tardanza = tardanza
-
-    def datos(self):
-        return "================DATOS DE ENTRADA==================\n"\
-               f"TRABAJADOR:\t\t {self.nombre}\n"\
-               f"CATEGORIA:\t\t {self.categoria}\n"\
-               f"HORAS EXTRAS:\t\t {self.horas}\n"\
-               f"TARDANZA: (minutos)\t {self.tardanza}"              
-
         
 
 class Boleta(Trabajador):
@@ -64,5 +56,4 @@ horas = int(input("Ingrese el número horas extras: "))
 tardanza = int(input("Ingrese la cantidad de minutos de tardanza acumulada: "))
         
 t1 = Boleta(nombre, categoria, horas, tardanza)
-t1.datos()
 print(t1)
