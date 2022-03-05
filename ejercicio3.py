@@ -8,15 +8,16 @@ class  Hospital:
 
     def __init__(self, dias,area):
         self.numdias = dias
-        self.area = area
+        self.area = area 
 
     def costo(self):
         if self.area in self.__costo:
             print('El total de los',self.numdias, 'días costará S/.', self.__costo[self.area]*self.numdias)
         else:
             print('No introdujo bien los datos')
-
+print("=======DIAS HOSPITALIZADO========")
 dias = int(input('Ingrese la cantidad de días que estubo el paciente: '))
+print("=======AREA========\n" "area 1\n" "area 2\n" "otros")
 area = input('Ingrese el área donde se aloja el paciente: ').lower()
 
 paciente = Hospital(dias, area)
